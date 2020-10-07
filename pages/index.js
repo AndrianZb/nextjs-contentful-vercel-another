@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/Link';
 import Post from '../components/post';
 const client = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -41,7 +42,7 @@ const HomePage = () => {
         <title>NextJS + Contentful + Vercel</title>
         <link rel="stylesheet" href="https://css.zeit.sh/v1.css" type="text/css" />
       </Head>
-
+    <Link href="/test/"><a>Test</a></Link>
       {renderedPosts}
     </>
   )
